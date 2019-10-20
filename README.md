@@ -1,4 +1,4 @@
-# alecrabbit/php-cli-snake
+# 🐍 PHP CLI Snake
 
 ## Lightweight cli spinner with zero dependencies
 
