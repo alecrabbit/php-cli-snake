@@ -25,6 +25,29 @@
 $ composer require alecrabbit/php-cli-snake
 ```
 
+### Quickstart
+
+```php
+require_once __DIR__ . '/../vendor/autoload.php';
+
+use AlecRabbit\Snake\Spinner;
+use React\EventLoop\Factory;
+
+$s = new Spinner();
+
+$loop = Factory::create();
+
+$loop->addPeriodicTimer($s->interval(), static function () use ($s) {
+    $s->spin();
+});
+
+$s->begin();
+
+$loop->run();
+
+$s->end();
+```
+
 ### Usage
  
  See [examples](./examples)
