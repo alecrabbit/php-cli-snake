@@ -1,5 +1,6 @@
 # alecrabbit/php-cli-snake
 
+- [ ] add tests
 
 ---
 
