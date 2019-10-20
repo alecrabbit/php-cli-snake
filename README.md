@@ -33,6 +33,8 @@ $ composer require alecrabbit/php-cli-snake
 
 | Feature       | [php-console-spinner](https://github.com/alecrabbit/php-console-spinner)    |  [php-cli-snake](https://github.com/alecrabbit/php-cli-snake) |
 | ------------- | :---:  | :---: |
+| Lightweight        |  ❌ ️ |  ✔️  |
+| Has zero dependencies      |  ❌ ️ |  ✔️  |
 | Highly  configurable        |  ✔️ ️ |  ❌  |
 | Contains various spinner classes        |  ✔️ ️ |  ❌  |
 | Progress indicator        |  ✔️ ️ |  ❌  |
@@ -46,8 +48,8 @@ $ composer require alecrabbit/php-cli-snake
 | Cursor hide can be disabled      |  ✔️ ️ |  ❌  |
 | Can use optional custom output      |  ✔️ ️ |  ❌  |
 | Has `erase()` method        |  ✔️ ️ |  ✔️ ️ |
-| Hides cursor on `$spinner->begin()`  |  ✔️ ️ |  ✔️ ️ |
-| Shows cursor on `$spinner->end()`  |  ✔️ ️ |  ✔️ ️ |
+| Hides cursor with `$spinner->begin()`  |  ✔️ ️ |  ✔️ ️ |
+| Shows cursor with `$spinner->end()`  |  ✔️ ️ |  ✔️ ️ |
 | Supports piping         |  ✔️ ️ |  ✔️ ️ |
 | Supports redirect        |  ✔️ ️ |  ✔️ ️ |
 | Supports `no color` mode        |  ✔️ ️ |  ✔️ ️ |
