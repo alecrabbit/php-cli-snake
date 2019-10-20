@@ -22,9 +22,7 @@
 $ composer require alecrabbit/php-cli-snake
 ```
 
-### Features
-
-- supplied with `SymfonyOutputAdapter::class`
+### Feature comparision
 
 | Feature       | [php-console-spinner](https://github.com/alecrabbit/php-console-spinner)    |  [php-cli-snake](https://github.com/alecrabbit/php-cli-snake) |
 | ------------- | :---:  | :---: |
