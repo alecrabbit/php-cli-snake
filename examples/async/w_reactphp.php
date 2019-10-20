@@ -1,13 +1,12 @@
 <?php declare(strict_types=1);
 
-require_once __DIR__ . '/../tests/bootstrap.php';
+require_once __DIR__ . '/../../vendor/autoload.php';
 
 use AlecRabbit\Snake\Spinner;
 use React\EventLoop\Factory;
 
 $s = new Spinner();
 //$s->useStdOut(); // optional, use STDOUT instead of STDERR
-
 
 $loop = Factory::create();
 
@@ -24,12 +23,12 @@ $loop->addTimer(0.5, static function () {
 });
 
 $loop->addTimer(0.9, static function () {
-    echo 'Message One' . PHP_EOL;
+    echo 'Message One: is written to StdOut.' . PHP_EOL;
     dots();
 });
 
 $loop->addTimer(1.7, static function () {
-    echo 'Message Two' . PHP_EOL;
+    echo 'Message Two: is written to StdOut.' . PHP_EOL;
     dots();
 });
 
