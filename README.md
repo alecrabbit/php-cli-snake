@@ -19,6 +19,10 @@
 $ composer require alecrabbit/php-cli-snake
 ```
 
+### Usage
+ 
+ See [examples](./examples)
+ 
 ### Feature comparision
 
 | Feature       | [php-console-spinner](https://github.com/alecrabbit/php-console-spinner)    |  [php-cli-snake](https://github.com/alecrabbit/php-cli-snake) |
@@ -44,7 +48,3 @@ $ composer require alecrabbit/php-cli-snake
 | Supports `16 color`        |  ✔️ ️ |  ✔️ ️ |
 | Supports `256 color`        |  ✔️ ️ |  ✔️ ️ |
 
-### Usage
- 
- See [examples](./examples)
- 
