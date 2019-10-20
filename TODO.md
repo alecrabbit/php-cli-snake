@@ -1,8 +1,7 @@
 # alecrabbit/php-cli-snake
 
+- [ ] add travis 
+- [ ] add appveyor 
 - [ ] add tests
 
 ---
-
-- [x] create an awesome package
-- [x] add TODO.md file
