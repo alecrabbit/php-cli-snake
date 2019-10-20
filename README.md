@@ -26,23 +26,23 @@ $ composer require alecrabbit/php-cli-snake
 
 | Feature       | [php-console-spinner](https://github.com/alecrabbit/php-console-spinner)    |  [php-cli-snake](https://github.com/alecrabbit/php-cli-snake) |
 | ------------- | :---:  | :---: |
-| Highly  configurable        |  ✔️ ️  |  ❌  |
-| Contains various spinner classes        |  ✔️️️️  |  ❌  |
-| Progress indicator        |  ✔️️️️  |  ❌  |
-| Messages indicator        |  ✔️️️️  |  ❌  |
-| Color settings for spinner       |  ✔️️️️  |  ❌  |
-| Color settings for messages        |  ✔️️️️  |  ❌  |
-| Color settings for progress indicator        |  ✔️️️️  |  ❌  |
-| Has `disable()` method        |  ✔️️️️  |  ❌  |
-| Has `enable()` method        |  ✔️️️️  |  ❌  |
-| Has `erase()` method        |  ✔️️️️  |  ✔️️️️  |
-| Can show final message      |  ✔️️️️  |  ❌  |
-| Hides cursor on `$spinner->begin()`  |  ✔️️️️  |  ✔️️️️  |
-| Shows cursor on `$spinner->end()`  |  ✔️️️️  |  ✔️️️️  |
-| Cursor hide can be disabled      |  ✔️️️️  |  ❌  |
-| Can use optional custom output      |  ✔️️️️  |  ❌  |
-| Supports piping         |  ✔️️️  |  ✔️️️  |
-| Supports redirect        |  ✔️️️  |  ✔️️️  |
-| Supports `no color`        | ✔️️️   | ✔️️️   |
-| Supports `16 color`        | ✔️️️   | ✔️️️   |
-| Supports `256 color`        | ✔️️️   | ✔️️️   |
+| Highly  configurable        |  ✔️ ️ |  ❌  |
+| Contains various spinner classes        |  ✔️ ️ |  ❌  |
+| Progress indicator        |  ✔️ ️ |  ❌  |
+| Messages indicator        |  ✔️ ️ |  ❌  |
+| Color settings for spinner       |  ✔️ ️ |  ❌  |
+| Color settings for messages        |  ✔️ ️ |  ❌  |
+| Color settings for progress indicator        |  ✔️ ️ |  ❌  |
+| Has `disable()` method        |  ✔️ ️ |  ❌  |
+| Has `enable()` method        |  ✔️ ️ |  ❌  |
+| Has `erase()` method        |  ✔️ ️ |  ✔️ ️ |
+| Can show final message      |  ✔️ ️ |  ❌  |
+| Hides cursor on `$spinner->begin()`  |  ✔️ ️ |  ✔️ ️ |
+| Shows cursor on `$spinner->end()`  |  ✔️ ️ |  ✔️ ️ |
+| Cursor hide can be disabled      |  ✔️ ️ |  ❌  |
+| Can use optional custom output      |  ✔️ ️ |  ❌  |
+| Supports piping         |  ✔️ ️ |  ✔️ ️ |
+| Supports redirect        |  ✔️ ️ |  ✔️ ️ |
+| Supports `no color`        |  ✔️ ️ |  ✔️ ️ |
+| Supports `16 color`        |  ✔️ ️ |  ✔️ ️ |
+| Supports `256 color`        |  ✔️ ️ |  ✔️ ️ |
