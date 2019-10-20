@@ -2,7 +2,7 @@
 
 require_once __DIR__ . '/../../vendor/autoload.php';
 
-use AlecRabbit\Snake\Color;
+use AlecRabbit\Snake\Contracts\Color;
 use AlecRabbit\Snake\Spinner;
 use React\EventLoop\Factory;
 

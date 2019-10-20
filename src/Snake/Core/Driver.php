@@ -2,7 +2,9 @@
 
 declare(strict_types=1);
 
-namespace AlecRabbit\Snake;
+namespace AlecRabbit\Snake\Core;
+
+use AlecRabbit\Snake\Contracts\Color;
 
 class Driver
 {

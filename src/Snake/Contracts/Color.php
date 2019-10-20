@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace AlecRabbit\Snake;
+namespace AlecRabbit\Snake\Contracts;
 
 class Color
 {

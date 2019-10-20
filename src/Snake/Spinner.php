@@ -4,6 +4,9 @@ declare(strict_types=1);
 
 namespace AlecRabbit\Snake;
 
+use AlecRabbit\Snake\Contracts\Color;
+use AlecRabbit\Snake\Core\Driver;
+
 class Spinner
 {
     private const CHARS = ['⠏', '⠛', '⠹', '⢸', '⣰', '⣤', '⣆', '⡇'];
