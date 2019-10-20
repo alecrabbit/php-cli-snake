@@ -10,10 +10,8 @@
 <!-- [![Code Coverage](https://scrutinizer-ci.com/g/alecrabbit/php-cli-snake/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/alecrabbit/php-cli-snake/?branch=master)-->
 
 [![Latest Stable Version](https://poser.pugx.org/alecrabbit/php-cli-snake/v/stable)](https://packagist.org/packages/alecrabbit/php-cli-snake)
-[![Latest Stable Version](https://img.shields.io/packagist/v/alecrabbit/php-cli-snake.svg)](https://packagist.org/packages/alecrabbit/php-cli-snake)
 [![Latest Unstable Version](https://poser.pugx.org/alecrabbit/php-cli-snake/v/unstable)](https://packagist.org/packages/alecrabbit/php-cli-snake)
-
-[![License](https://poser.pugx.org/alecrabbit/php-cli-snake/license)](https://packagist.org/packages/alecrabbit/php-cli-snake)
+[![License](https://img.shields.io/packagist/l/alecrabbit/php-cli-snake)](https://packagist.org/packages/alecrabbit/php-cli-snake)
 
 ### Installation
 
@@ -36,10 +34,10 @@ $ composer require alecrabbit/php-cli-snake
 | Has `enable()` method        |  ✔️ ️ |  ❌  |
 | Has `erase()` method        |  ✔️ ️ |  ✔️ ️ |
 | Can show final message      |  ✔️ ️ |  ❌  |
-| Hides cursor on `$spinner->begin()`  |  ✔️ ️ |  ✔️ ️ |
-| Shows cursor on `$spinner->end()`  |  ✔️ ️ |  ✔️ ️ |
 | Cursor hide can be disabled      |  ✔️ ️ |  ❌  |
 | Can use optional custom output      |  ✔️ ️ |  ❌  |
+| Hides cursor on `$spinner->begin()`  |  ✔️ ️ |  ✔️ ️ |
+| Shows cursor on `$spinner->end()`  |  ✔️ ️ |  ✔️ ️ |
 | Supports piping         |  ✔️ ️ |  ✔️ ️ |
 | Supports redirect        |  ✔️ ️ |  ✔️ ️ |
 | Supports `no color`        |  ✔️ ️ |  ✔️ ️ |
