@@ -1,6 +1,6 @@
 # 🐍 PHP CLI Snake
 
-## Lightweight cli spinner with zero dependencies
+## Lightweight cli snake spinner with zero dependencies
 
 ```
 "require": {
