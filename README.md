@@ -50,7 +50,7 @@ $ composer require alecrabbit/php-cli-snake
 | Shows cursor on `$spinner->end()`  |  ✔️ ️ |  ✔️ ️ |
 | Supports piping         |  ✔️ ️ |  ✔️ ️ |
 | Supports redirect        |  ✔️ ️ |  ✔️ ️ |
-| Supports `no color`        |  ✔️ ️ |  ✔️ ️ |
-| Supports `16 color`        |  ✔️ ️ |  ✔️ ️ |
-| Supports `256 color`        |  ✔️ ️ |  ✔️ ️ |
+| Supports `no color` mode        |  ✔️ ️ |  ✔️ ️ |
+| Supports `16 color` mode        |  ✔️ ️ |  ✔️ ️ |
+| Supports `256 color` mode        |  ✔️ ️ |  ✔️ ️ |
 
