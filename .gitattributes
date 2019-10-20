@@ -8,7 +8,7 @@ TODO.md export-ignore
 composer.lock export-ignore
 docker-compose-debug.yml export-ignore
 docker-compose.yml export-ignore
-/example export-ignore
+/examples export-ignore
 phpcs.xml export-ignore
 phpmd.xml export-ignore
 phpunit.xml export-ignore

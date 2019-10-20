@@ -32,10 +32,10 @@ $ composer require alecrabbit/php-cli-snake
 | Color settings for progress indicator        |  ✔️ ️ |  ❌  |
 | Has `disable()` method        |  ✔️ ️ |  ❌  |
 | Has `enable()` method        |  ✔️ ️ |  ❌  |
-| Has `erase()` method        |  ✔️ ️ |  ✔️ ️ |
 | Can show final message      |  ✔️ ️ |  ❌  |
 | Cursor hide can be disabled      |  ✔️ ️ |  ❌  |
 | Can use optional custom output      |  ✔️ ️ |  ❌  |
+| Has `erase()` method        |  ✔️ ️ |  ✔️ ️ |
 | Hides cursor on `$spinner->begin()`  |  ✔️ ️ |  ✔️ ️ |
 | Shows cursor on `$spinner->end()`  |  ✔️ ️ |  ✔️ ️ |
 | Supports piping         |  ✔️ ️ |  ✔️ ️ |
