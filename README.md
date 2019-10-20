@@ -20,6 +20,9 @@
 
 [![License](https://img.shields.io/packagist/l/alecrabbit/php-cli-snake)](https://packagist.org/packages/alecrabbit/php-cli-snake)
 
+
+![advanced](docs/images/fpdemo.svg)
+
 ### Installation
 
 ```bash
