@@ -22,30 +22,26 @@ class Driver
         $this->setColorLevel($colorLevel);
     }
 
+    /**
+     * @param int $colorLevel
+     */
+    public function setColorLevel(int $colorLevel): void
+    {
+        if (!in_array($colorLevel, Color::ALLOWED, true)) {
+            throw new \InvalidArgumentException('Unknown color level.');
+        }
+        $this->colorLevel = $colorLevel;
+    }
+
+//    public function erase(): void
+//    {
+//        $this->write("\033[1X");
+//    }
+//
 
     public function moveBackSequence(): string
     {
         return "\033[1D";
-    }
-
-    public function erase(): void
-    {
-        $this->write("\033[1X");
-    }
-
-    public function write(string ...$text): void
-    {
-        foreach ($text as $s) {
-            if (false === $this->stream) {
-                echo $s;
-            } elseif (false === @fwrite($this->stream, $s)) {
-                // should never happen
-                throw new \RuntimeException('Unable to write stream.');
-            }
-        }
-        if (false !== $this->stream) {
-            fflush($this->stream);
-        }
     }
 
     public function eraseSequence(): string
@@ -69,24 +65,36 @@ class Driver
         $this->write(self::HIDE_CURSOR_SEQ);
     }
 
+    /**
+     * @codeCoverageIgnore
+     *
+     * @param string ...$text
+     */
+    public function write(string ...$text): void
+    {
+        foreach ($text as $s) {
+            if (false === $this->stream) {
+                echo $s;
+            } elseif (false === @fwrite($this->stream, $s)) {
+                // should never happen
+                throw new \RuntimeException('Unable to write stream.');
+            }
+        }
+        if (false !== $this->stream) {
+            fflush($this->stream);
+        }
+    }
+
     public function showCursor(): void
     {
         $this->write(self::SHOW_CURSOR_SEQ);
     }
 
+    /**
+     * @codeCoverageIgnore
+     */
     public function disableStdErr(): void
     {
         $this->stream = false;
-    }
-
-    /**
-     * @param int $colorLevel
-     */
-    public function setColorLevel(int $colorLevel): void
-    {
-        if (!in_array($colorLevel, Color::ALLOWED, true)) {
-            throw new \InvalidArgumentException('Unknown color level.');
-        }
-        $this->colorLevel = $colorLevel;
     }
 }
