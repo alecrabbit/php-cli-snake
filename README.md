@@ -26,7 +26,7 @@ $ composer require alecrabbit/php-cli-snake
 
 | Feature       | [php-console-spinner](https://github.com/alecrabbit/php-console-spinner)    |  [php-cli-snake](https://github.com/alecrabbit/php-cli-snake) |
 | ------------- | :---:  | :---: |
-| Highly  configurable        |  ✔️  |  ❌  |
+| Highly  configurable        |  "✔️ "️  |  ❌  |
 | Contains various spinner classes        |  ✔️️️️  |  ❌  |
 | Progress indicator        |  ✔️️️️  |  ❌  |
 | Messages indicator        |  ✔️️️️  |  ❌  |
