@@ -14,6 +14,7 @@ $loop->addPeriodicTimer($s->interval(), static function () use ($s) {
     $s->spin();
 });
 
+// Run only for two seconds
 $loop->addTimer(2, static function () use ($loop) {
     $loop->stop();
 });
