@@ -2,11 +2,6 @@
 
 ## Lightweight cli snake spinner with zero dependencies
 
-```
-"require": {
-    "php": ">=7.2"
-}
-```
 
 [![PHP Version](https://img.shields.io/packagist/php-v/alecrabbit/php-cli-snake.svg)](https://php.net)
 [![Build Status](https://travis-ci.com/alecrabbit/php-cli-snake.svg?branch=master)](https://travis-ci.com/alecrabbit/php-cli-snake)
@@ -22,6 +17,14 @@
 
 
 ![advanced](docs/images/fpdemo.svg)
+
+### Zero dependencies
+
+```
+"require": {
+    "php": ">=7.2"
+}
+```
 
 ### Installation
 
