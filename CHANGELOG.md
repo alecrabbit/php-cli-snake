@@ -6,6 +6,9 @@ All notable changes to this project will be documented in this file.
 <a name="unreleased"></a>
 ## [Unreleased]
 
+### Changed
+- project structure
+
 
 <a name="0.2.0"></a>
 ## [0.2.0] - 2019-10-20
