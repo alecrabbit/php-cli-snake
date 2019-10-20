@@ -6,6 +6,9 @@ namespace AlecRabbit\Snake;
 
 class Driver
 {
+    public const HIDE_CURSOR_SEQ = "\033[?25l";
+    public const SHOW_CURSOR_SEQ = "\033[?25h";
+
     /** @var false|resource */
     private $stream = STDERR;
 
@@ -61,12 +64,12 @@ class Driver
 
     public function hideCursor(): void
     {
-        $this->write("\033[?25l");
+        $this->write(self::HIDE_CURSOR_SEQ);
     }
 
     public function showCursor(): void
     {
-        $this->write("\033[?25h");
+        $this->write(self::SHOW_CURSOR_SEQ);
     }
 
     public function disableStdErr(): void
