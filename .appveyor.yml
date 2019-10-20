@@ -23,7 +23,7 @@ matrix:
 
 cache:
   - c:\php -> .appveyor.yml
-  - '%LOCALAPPDATA%\Composeriles'
+  - '%LOCALAPPDATA%\Composer\files'
 
 init:
   - SET PATH=c:\php\%PHP_VERSION%;%PATH%
@@ -49,7 +49,7 @@ install:
   - IF NOT EXIST php-installed.txt echo assert.exception=On >> php.ini
   - IF NOT EXIST php-installed.txt curl -fsS -o composer.phar https://getcomposer.org/composer.phar
   - IF NOT EXIST php-installed.txt echo @php %%~dp0composer.phar %%* > composer.bat
-  - IF NOT EXIST php-installed.txt curl -fsS -o c:\php\%PHP_VERSION%xt\php_xdebug-%XDEBUG_VERSION%-vc15.dll https://xdebug.org/files/php_xdebug-%XDEBUG_VERSION%-vc15.dll
+  - IF NOT EXIST php-installed.txt curl -fsS -o c:\php\%PHP_VERSION%\ext\php_xdebug-%XDEBUG_VERSION%-vc15.dll https://xdebug.org/files/php_xdebug-%XDEBUG_VERSION%-vc15.dll
   - IF NOT EXIST php-installed.txt echo zend_extension=php_xdebug-%XDEBUG_VERSION%-vc15.dll >> php.ini
   - IF NOT EXIST php-installed.txt type nul >> php-installed.txt
   - cd c:\phptools
@@ -57,4 +57,4 @@ install:
 
 test_script:
   - cd c:\phptools
-  - vendorin\phpunit.bat --coverage-text
+  - vendor\bin\phpunit.bat --coverage-text
