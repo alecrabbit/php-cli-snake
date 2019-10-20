@@ -81,9 +81,9 @@ class Spinner
     /** @var int */
     private $colorCount;
 
-    public function __construct(int $cl = Color::COLOR_16)
+    public function __construct(int $colorLevel = Color::COLOR_256)
     {
-        $this->driver = new Driver($cl);
+        $this->driver = new Driver($colorLevel);
         $this->framesCount = count(self::CHARS);
         $this->colorCount = count(self::COLORS);
     }

@@ -14,7 +14,7 @@ class Driver
 
     public function __construct(int $colorLevel)
     {
-        $this->colorLevel = $colorLevel;
+        $this->setColorLevel($colorLevel);
     }
 
 
@@ -79,6 +79,9 @@ class Driver
      */
     public function setColorLevel(int $colorLevel): void
     {
+        if (!in_array($colorLevel, Color::ALLOWED, true)) {
+            throw new \InvalidArgumentException('Unknown color level.');
+        }
         $this->colorLevel = $colorLevel;
     }
 }

@@ -21,3 +21,11 @@
 ```bash
 $ composer require alecrabbit/php-cli-snake
 ```
+
+| Feature       | [php-console-spinner](https://github.com/alecrabbit/php-console-spinner)    |  [php-cli-snake](https://github.com/alecrabbit/php-cli-snake) |
+| ------------- | :---:  | :---: |
+| Highly  configurable        |  ✔  |  ❌  |
+| Contains various spinner classes        |  ✔  |  ❌  |
+| Supports `no color`        | ✔   | ✔   |
+| Supports `16 color`        | ✔   | ✔   |
+| Supports `256 color`        | ✔   | ✔   |
