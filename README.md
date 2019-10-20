@@ -2,6 +2,12 @@
 
 ## Lightweight cli spinner with zero dependencies
 
+```
+"require": {
+    "php": ">=7.2"
+}
+```
+
 [![PHP Version](https://img.shields.io/packagist/php-v/alecrabbit/php-cli-snake.svg)](https://php.net)
 [![Total Downloads](https://poser.pugx.org/alecrabbit/php-cli-snake/downloads)](https://packagist.org/packages/alecrabbit/php-cli-snake)
 <!-- [![Build Status](https://travis-ci.com/alecrabbit/php-cli-snake.svg?branch=master)](https://travis-ci.com/alecrabbit/php-cli-snake) -->
