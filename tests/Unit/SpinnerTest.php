@@ -78,4 +78,12 @@ class SpinnerTest extends TestCase
             $this->fail('Unable to reflect property.');
         }
     }
+
+    /** @test */
+    public function withError(): void
+    {
+        $this->expectException(\InvalidArgumentException::class);
+        $this->expectExceptionMessage('Unknown color level.');
+        $s = new Spinner(2);
+    }
 }

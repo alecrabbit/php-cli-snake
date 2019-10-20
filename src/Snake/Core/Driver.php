@@ -33,12 +33,6 @@ class Driver
         $this->colorLevel = $colorLevel;
     }
 
-//    public function erase(): void
-//    {
-//        $this->write("\033[1X");
-//    }
-//
-
     public function moveBackSequence(): string
     {
         return "\033[1D";
