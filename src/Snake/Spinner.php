@@ -5,9 +5,10 @@ declare(strict_types=1);
 namespace AlecRabbit\Snake;
 
 use AlecRabbit\Snake\Contracts\Color;
+use AlecRabbit\Snake\Contracts\SpinnerInterface;
 use AlecRabbit\Snake\Core\Driver;
 
-class Spinner
+class Spinner implements SpinnerInterface
 {
     private const CHARS = ['⠏', '⠛', '⠹', '⢸', '⣰', '⣤', '⣆', '⡇'];
     private const COLORS = [
@@ -83,12 +84,9 @@ class Spinner
     private $framesCount;
     /** @var int */
     private $colorCount;
-    /** @var bool */
-    private $enabled;
 
     public function __construct(int $colorLevel = Color::COLOR_256)
     {
-        $this->enabled = $colorLevel >= Color::NO_COLOR;
         $this->driver = new Driver($colorLevel);
         $this->framesCount = count(self::CHARS);
         $this->colorCount = count(self::COLORS);
@@ -96,10 +94,7 @@ class Spinner
 
     public function spin(): void
     {
-        if (!$this->enabled) {
-            return;
-        }
-        $this->driver->write(
+       $this->driver->write(
             $this->driver->eraseSequence(),
             $this->driver->frameSequence(
                 self::COLORS[$this->currentColorIdx],
@@ -131,26 +126,17 @@ class Spinner
 
     public function begin(): void
     {
-        if (!$this->enabled) {
-            return;
-        }
         $this->driver->hideCursor();
     }
 
     public function end(): void
     {
-        if (!$this->enabled) {
-            return;
-        }
         $this->erase();
         $this->driver->showCursor();
     }
 
     public function erase(): void
     {
-        if (!$this->enabled) {
-            return;
-        }
         $this->driver->write(
             $this->driver->eraseSequence()
         );
@@ -158,23 +144,6 @@ class Spinner
 
     public function useStdOut(): void
     {
-        if (!$this->enabled) {
-            return;
-        }
         $this->driver->useStdOut();
-//        $this->driver->disableStdErr();
-    }
-
-    public function disable(): void
-    {
-        $this->enabled = false;
-    }
-
-    /**
-     * @return bool
-     */
-    public function isEnabled(): bool
-    {
-        return $this->enabled;
     }
 }
