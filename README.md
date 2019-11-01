@@ -11,6 +11,7 @@
 [![Total Downloads](https://poser.pugx.org/alecrabbit/php-cli-snake/downloads)](https://packagist.org/packages/alecrabbit/php-cli-snake)
 
 [![Latest Stable Version](https://poser.pugx.org/alecrabbit/php-cli-snake/v/stable)](https://packagist.org/packages/alecrabbit/php-cli-snake)
+[![Packagist Pre Release Version](https://img.shields.io/packagist/vpre/alecrabbit/php-cli-snake)](https://packagist.org/packages/alecrabbit/php-cli-snake)
 [![Latest Unstable Version](https://poser.pugx.org/alecrabbit/php-cli-snake/v/unstable)](https://packagist.org/packages/alecrabbit/php-cli-snake)
 
 [![License](https://img.shields.io/packagist/l/alecrabbit/php-cli-snake)](https://packagist.org/packages/alecrabbit/php-cli-snake)
