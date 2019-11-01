@@ -91,4 +91,12 @@ class Driver
     {
         $this->stream = false;
     }
+
+    /**
+     * @codeCoverageIgnore
+     */
+    public function useStdOut(): void
+    {
+        $this->stream = STDOUT;
+    }
 }
