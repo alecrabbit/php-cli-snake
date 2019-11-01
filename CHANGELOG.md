@@ -6,6 +6,14 @@ All notable changes to this project will be documented in this file.
 <a name="unreleased"></a>
 ## [Unreleased]
 
+### Added
+- interface `SpinnerInterface`
+
+### Removed
+- const `Color::NO_ANSI`
+-  method `Spinner::disable()`
+-  method `Spinner::isEnabled()`
+
 
 <a name="0.4.0"></a>
 ## [0.4.0] - 2019-11-01
