@@ -7,7 +7,7 @@ use AlecRabbit\Snake\Spinner;
 use React\EventLoop\Factory;
 
 $s = new Spinner(Color::COLOR_16); // Downgrade color mode, default is Color::COLOR_256
-//$s->useStdOut(); // optional, use STDOUT instead of STDERR
+$s->useStdOut(); // optional, use STDOUT instead of STDERR
 
 $loop = Factory::create();
 
