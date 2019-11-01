@@ -10,10 +10,13 @@ use ReflectionProperty;
 
 class SpinnerTest extends TestCase
 {
+    public const UNKNOWN_COLOR_LEVEL = 'Unknown color level.';
+
     /** @test */
     public function constructor(): void
     {
         $s = new Spinner();
+        $this->assertTrue($s->isEnabled());
         $this->assertInstanceOf(Spinner::class, $s);
         $this->assertEquals(0.1, $s->interval());
         $driver = $this->replaceDriver($s);
@@ -41,16 +44,17 @@ class SpinnerTest extends TestCase
 
     /**
      * @param Spinner $s
+     * @param int $colorLevel
      * @return Driver|ReflectionProperty
      */
-    protected function replaceDriver(Spinner $s)
+    protected function replaceDriver(Spinner $s, int $colorLevel = Color::NO_COLOR)
     {
         try {
             $driver = new ReflectionProperty(get_class($s), 'driver');
             $driver->setAccessible(true);
             $driver->setValue(
                 $s,
-                new class (Color::NO_COLOR) extends Driver
+                new class ($colorLevel) extends Driver
                 {
                     /** @var string */
                     public $buffer = '';
@@ -80,10 +84,68 @@ class SpinnerTest extends TestCase
     }
 
     /** @test */
+    public function instance(): void
+    {
+        $colorLevel = Color::NO_ANSI;
+        $s = new Spinner($colorLevel);
+        $this->assertFalse($s->isEnabled());
+        $this->assertInstanceOf(Spinner::class, $s);
+        $this->assertEquals(0.1, $s->interval());
+        $driver = $this->replaceDriver($s, $colorLevel);
+        $s->begin();
+        $this->assertEquals('', $driver->getBuffer());
+        $s->spin();
+        $this->assertEquals('', $driver->getBuffer());
+        $s->spin();
+        $this->assertEquals('', $driver->getBuffer());
+        $s->spin();
+        $this->assertEquals('', $driver->getBuffer());
+        $s->spin();
+        $this->assertEquals('', $driver->getBuffer());
+        $s->spin();
+        $this->assertEquals('', $driver->getBuffer());
+        $s->end();
+        $this->assertEquals('', $driver->getBuffer());
+    }
+
+    /** @test */
+    public function disabled(): void
+    {
+        $s = new Spinner();
+        $s->disable();
+        $this->assertFalse($s->isEnabled());
+        $this->assertInstanceOf(Spinner::class, $s);
+        $this->assertEquals(0.1, $s->interval());
+        $driver = $this->replaceDriver($s);
+        $s->begin();
+        $this->assertEquals('', $driver->getBuffer());
+        $s->spin();
+        $this->assertEquals('', $driver->getBuffer());
+        $s->spin();
+        $this->assertEquals('', $driver->getBuffer());
+        $s->spin();
+        $this->assertEquals('', $driver->getBuffer());
+        $s->spin();
+        $this->assertEquals('', $driver->getBuffer());
+        $s->spin();
+        $this->assertEquals('', $driver->getBuffer());
+        $s->end();
+        $this->assertEquals('', $driver->getBuffer());
+    }
+
+    /** @test */
     public function withError(): void
     {
         $this->expectException(\InvalidArgumentException::class);
-        $this->expectExceptionMessage('Unknown color level.');
+        $this->expectExceptionMessage(self::UNKNOWN_COLOR_LEVEL);
         $s = new Spinner(2);
+    }
+
+    /** @test */
+    public function withError2(): void
+    {
+        $this->expectException(\InvalidArgumentException::class);
+        $this->expectExceptionMessage(self::UNKNOWN_COLOR_LEVEL);
+        $s = new Spinner(-2);
     }
 }
