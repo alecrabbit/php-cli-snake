@@ -169,4 +169,12 @@ class Spinner
     {
         $this->enabled = false;
     }
+
+    /**
+     * @return bool
+     */
+    public function isEnabled(): bool
+    {
+        return $this->enabled;
+    }
 }
