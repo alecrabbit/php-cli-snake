@@ -94,7 +94,7 @@ class Spinner implements SpinnerInterface
 
     public function spin(): void
     {
-       $this->driver->write(
+        $this->driver->write(
             $this->driver->eraseSequence(),
             $this->driver->frameSequence(
                 self::COLORS[$this->currentColorIdx],
