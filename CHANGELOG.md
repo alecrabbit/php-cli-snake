@@ -11,6 +11,9 @@ All notable changes to this project will be documented in this file.
 - method `Spinner::disable()`
 - method `Driver::useStdOut()`
 
+### Removed
+- method `Driver::disableStdErr()`
+
 
 <a name="0.3.0"></a>
 ## [0.3.0] - 2019-10-20
