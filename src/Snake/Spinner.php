@@ -83,9 +83,12 @@ class Spinner
     private $framesCount;
     /** @var int */
     private $colorCount;
+    /** @var bool */
+    private $enabled;
 
     public function __construct(int $colorLevel = Color::COLOR_256)
     {
+        $this->enabled = $colorLevel >= Color::NO_COLOR;
         $this->driver = new Driver($colorLevel);
         $this->framesCount = count(self::CHARS);
         $this->colorCount = count(self::COLORS);
@@ -93,6 +96,9 @@ class Spinner
 
     public function spin(): void
     {
+        if (!$this->enabled) {
+            return;
+        }
         $this->driver->write(
             $this->driver->eraseSequence(),
             $this->driver->frameSequence(
@@ -102,13 +108,6 @@ class Spinner
             $this->driver->moveBackSequence()
         );
         $this->update();
-    }
-
-    public function erase(): void
-    {
-        $this->driver->write(
-            $this->driver->eraseSequence()
-        );
     }
 
     private function update(): void
@@ -132,17 +131,42 @@ class Spinner
 
     public function begin(): void
     {
+        if (!$this->enabled) {
+            return;
+        }
         $this->driver->hideCursor();
     }
 
     public function end(): void
     {
+        if (!$this->enabled) {
+            return;
+        }
         $this->erase();
         $this->driver->showCursor();
     }
 
+    public function erase(): void
+    {
+        if (!$this->enabled) {
+            return;
+        }
+        $this->driver->write(
+            $this->driver->eraseSequence()
+        );
+    }
+
     public function useStdOut(): void
     {
-        $this->driver->disableStdErr();
+        if (!$this->enabled) {
+            return;
+        }
+        $this->driver->useStdOut();
+//        $this->driver->disableStdErr();
+    }
+
+    public function disable(): void
+    {
+        $this->enabled = false;
     }
 }
