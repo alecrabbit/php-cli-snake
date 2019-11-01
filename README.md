@@ -72,7 +72,7 @@ $s->end();
 | Color settings for spinner       |  ✔️ ️ |  ❌  |
 | Color settings for messages        |  ✔️ ️ |  ❌  |
 | Color settings for progress indicator        |  ✔️ ️ |  ❌  |
-| Has `disable()` method        |  ✔️ ️ |  ❌  |
+| Has `disable()` method        |  ✔️ ️ |  ✔️  |
 | Has `enable()` method        |  ✔️ ️ |  ❌  |
 | Can show final message      |  ✔️ ️ |  ❌  |
 | Cursor hide can be disabled      |  ✔️ ️ |  ❌  |
