@@ -20,5 +20,8 @@ interface SpinnerInterface
 
     public function erase(): void;
 
+    /**
+     * Switch to STDOUT instead of STDERR
+     */
     public function useStdOut(): void;
 }
