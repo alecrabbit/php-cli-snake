@@ -84,13 +84,13 @@ class Driver
         $this->write(self::SHOW_CURSOR_SEQ);
     }
 
-    /**
-     * @codeCoverageIgnore
-     */
-    public function disableStdErr(): void
-    {
-        $this->stream = false;
-    }
+//    /**
+//     * @codeCoverageIgnore
+//     */
+//    public function disableStdErr(): void
+//    {
+//        $this->stream = false;
+//    }
 
     /**
      * @codeCoverageIgnore
