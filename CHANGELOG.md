@@ -6,6 +6,11 @@ All notable changes to this project will be documented in this file.
 <a name="unreleased"></a>
 ## [Unreleased]
 
+### Added
+- method `Spinner::isEnabled()`
+- method `Spinner::disable()`
+- method `Driver::useStdOut()`
+
 
 <a name="0.3.0"></a>
 ## [0.3.0] - 2019-10-20
