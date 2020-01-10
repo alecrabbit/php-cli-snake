@@ -9,7 +9,7 @@ interface SpinnerInterface
     public function spin(): void;
 
     /**
-     * Returns spinner refresh interval
+     * Returns spinner refresh interval in seconds
      * @return float
      */
     public function interval(): float;
