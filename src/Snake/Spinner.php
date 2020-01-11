@@ -115,10 +115,7 @@ class Spinner implements SpinnerInterface
         }
     }
 
-    /**
-     * Returns spinner refresh interval
-     * @return float
-     */
+    /** @inheritDoc */
     public function interval(): float
     {
         return 0.1;
