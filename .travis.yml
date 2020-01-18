@@ -4,12 +4,12 @@ php:
   - 7.2
   - 7.3
   - 7.4
-#  - nightly
+  - nightly
 
-# matrix:
-#  allow_failures:
-#    - php: 7.4
-#    - php: nightly
+matrix:
+ allow_failures:
+#    - php: 8
+   - php: nightly
 
 addons:
   apt:
