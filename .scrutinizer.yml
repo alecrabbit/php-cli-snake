@@ -1,6 +1,6 @@
 build:
   environment:
-    php: 7.2.16
+    php: 7.2.26
 
   nodes:
     analysis:
@@ -9,13 +9,13 @@ build:
         - php-scrutinizer-run
         - phpcs-run
 
-    tests-and-coverage:
-      tests:
-        override:
-        - command: 'php ./vendor/bin/phpunit --coverage-clover=clover.xml'
-          coverage:
-            file: clover.xml
-            format: clover
+#    tests-and-coverage:
+#      tests:
+#        override:
+#        - command: 'php ./vendor/bin/phpunit --coverage-clover=clover.xml'
+#          coverage:
+#            file: clover.xml
+#            format: clover
 
 filter:
   paths:
