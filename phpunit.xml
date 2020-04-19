@@ -7,7 +7,8 @@
          convertWarningsToExceptions="true"
          processIsolation="false"
          stopOnFailure="false"
-         bootstrap="tests/bootstrap.php">
+         bootstrap="tests/bootstrap.php"
+         printerClass="NunoMaduro\Collision\Adapters\Phpunit\Printer">
     <testsuites>
         <testsuite name="Feature">
             <directory suffix="Test.php">tests/Feature</directory>
@@ -26,9 +27,6 @@
             <directory suffix=".php">src</directory>
         </whitelist>
     </filter>
-    <listeners>
-        <listener class="NunoMaduro\Collision\Adapters\Phpunit\Listener"/>
-    </listeners>
     <logging>
         <log type="testdox-html" target="./tests/tmp/testdox.html"/>
         <log type="testdox-text" target="./tests/tmp/testdox.txt"/>
