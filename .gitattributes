@@ -20,6 +20,7 @@ psalm.xml export-ignore
 /.chglog export-ignore
 .dockerignore export-ignore
 .env export-ignore
+/.eval export-ignore
 /.git export-ignore
 .gitattributes export-ignore
 .gitattributes.keep export-ignore
