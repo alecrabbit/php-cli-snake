@@ -1,4 +1,4 @@
-version: '3.2'
+version: '3.7'
 
 services:
   &app-service app:
@@ -14,3 +14,13 @@ services:
       DOCKER_TERM: "${TERM:-}"      # pass host $TERM variable
       COLORTERM: "${COLORTERM:-}"   # pass host $COLORTERM variable
     command: keep-alive.sh
+    networks:
+      - internal
+
+networks:
+  internal:
+    driver: bridge
+    ipam:
+      driver: default
+      config:
+        - subnet: 192.168.220.0/28
