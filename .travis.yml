@@ -6,20 +6,12 @@ php:
   - 7.4
   - 8.0snapshot
 
- matrix:
+matrix:
   allow_failures:
     - php: 8.0snapshot
 
-addons:
-  apt:
-    packages:
-    - libevent-dev
-
 cache:
   bundler: true
-
-notifications:
-  email: false
 
 install:
   - travis_retry ./.travis/travis-init.sh
@@ -27,4 +19,3 @@ install:
 
 script:
   vendor/bin/phpunit --coverage-text
- 
