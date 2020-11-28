@@ -27,3 +27,4 @@ install:
 
 script:
   vendor/bin/phpunit --coverage-text
+ 
