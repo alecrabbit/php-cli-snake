@@ -6,6 +6,9 @@ All notable changes to this project will be documented in this file.
 <a name="unreleased"></a>
 ## [Unreleased]
 
+### Added
+- php 8 support
+
 ### Removed
 - support for php 7.2
 
