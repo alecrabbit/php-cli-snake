@@ -27,6 +27,7 @@
 }
 ```
 > Version 0.5.0 - php ^7.2
+>
 > Version 0.6.0 - php 8 support, dropped support for php 7.2
 
 ### Installation
