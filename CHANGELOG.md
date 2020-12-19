@@ -6,6 +6,9 @@ All notable changes to this project will be documented in this file.
 <a name="unreleased"></a>
 ## [Unreleased]
 
+
+<a name="0.6.0"></a>
+## [0.6.0] - 2020-12-19
 ### Added
 - php 8 support
 
@@ -53,7 +56,8 @@ All notable changes to this project will be documented in this file.
 <a name="0.0.1"></a>
 ## 0.0.1 - 2019-10-20
 
-[Unreleased]: https://github.com/alecrabbit/php-cli-snake/compare/0.5.0...HEAD
+[Unreleased]: https://github.com/alecrabbit/php-cli-snake/compare/0.6.0...HEAD
+[0.6.0]: https://github.com/alecrabbit/php-cli-snake/compare/0.5.0...0.6.0
 [0.5.0]: https://github.com/alecrabbit/php-cli-snake/compare/0.4.0...0.5.0
 [0.4.0]: https://github.com/alecrabbit/php-cli-snake/compare/0.3.0...0.4.0
 [0.3.0]: https://github.com/alecrabbit/php-cli-snake/compare/0.2.0...0.3.0
