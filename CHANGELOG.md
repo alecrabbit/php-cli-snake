@@ -6,6 +6,9 @@ All notable changes to this project will be documented in this file.
 <a name="unreleased"></a>
 ## [Unreleased]
 
+### Removed
+- support for php 7.2
+
 
 <a name="0.5.0"></a>
 ## [0.5.0] - 2019-11-01
