@@ -74,16 +74,11 @@ class Spinner implements SpinnerInterface
         197,
     ];
 
-    /** @var Driver */
-    private $driver;
-    /** @var int */
-    private $currentCharIdx = 0;
-    /** @var int */
-    private $currentColorIdx = 0;
-    /** @var int */
-    private $framesCount;
-    /** @var int */
-    private $colorCount;
+    private Driver $driver;
+    private int $currentCharIdx = 0;
+    private int $currentColorIdx = 0;
+    private int $framesCount;
+    private int $colorCount;
 
     public function __construct(int $colorLevel = Color::COLOR_256)
     {

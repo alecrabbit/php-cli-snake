@@ -5,6 +5,8 @@ declare(strict_types=1);
 namespace AlecRabbit\Snake\Core;
 
 use AlecRabbit\Snake\Contracts\Color;
+use InvalidArgumentException;
+use RuntimeException;
 
 class Driver
 {
@@ -14,8 +16,7 @@ class Driver
     /** @var false|resource */
     private $stream = STDERR;
 
-    /** @var int */
-    private $colorLevel;
+    private int $colorLevel;
 
     public function __construct(int $colorLevel)
     {
@@ -28,7 +29,7 @@ class Driver
     public function setColorLevel(int $colorLevel): void
     {
         if (!in_array($colorLevel, Color::ALLOWED, true)) {
-            throw new \InvalidArgumentException('Unknown color level.');
+            throw new InvalidArgumentException('Unknown color level.');
         }
         $this->colorLevel = $colorLevel;
     }
@@ -71,7 +72,7 @@ class Driver
                 echo $s;
             } elseif (false === @fwrite($this->stream, $s)) {
                 // should never happen
-                throw new \RuntimeException('Unable to write stream.');
+                throw new RuntimeException('Unable to write stream.');
             }
         }
         if (false !== $this->stream) {
