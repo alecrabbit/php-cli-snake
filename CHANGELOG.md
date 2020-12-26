@@ -6,6 +6,9 @@ All notable changes to this project will be documented in this file.
 <a name="unreleased"></a>
 ## [Unreleased]
 
+### Disabled
+- travis CI
+
 ### Removed
 - php 7.3 support
 
