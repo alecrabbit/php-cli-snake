@@ -16,29 +16,29 @@ class SpinnerTest extends TestCase
     public function constructor(): void
     {
         $s = new Spinner();
-        $this->assertInstanceOf(Spinner::class, $s);
-        $this->assertEquals(0.1, $s->interval());
+        self::assertInstanceOf(Spinner::class, $s);
+        self::assertEquals(0.1, $s->interval());
         $driver = $this->replaceDriver($s);
         $s->begin();
-        $this->assertEquals(H::xEsc("\033[?25l"), H::xEsc($driver->getBuffer()));
+        self::assertEquals(H::xEsc("\033[?25l"), H::xEsc($driver->getBuffer()));
         $s->spin();
-        $this->assertEquals(H::xEsc("\033[1X⠏\033[1D"), H::xEsc($driver->getBuffer()));
+        self::assertEquals(H::xEsc("\033[1X⠏\033[1D"), H::xEsc($driver->getBuffer()));
         $s->spin();
-        $this->assertEquals(H::xEsc("\033[1X⠛\033[1D"), H::xEsc($driver->getBuffer()));
+        self::assertEquals(H::xEsc("\033[1X⠛\033[1D"), H::xEsc($driver->getBuffer()));
         $s->spin();
-        $this->assertEquals(H::xEsc("\033[1X⠹\033[1D"), H::xEsc($driver->getBuffer()));
+        self::assertEquals(H::xEsc("\033[1X⠹\033[1D"), H::xEsc($driver->getBuffer()));
         $s->spin();
-        $this->assertEquals(H::xEsc("\033[1X⢸\033[1D"), H::xEsc($driver->getBuffer()));
+        self::assertEquals(H::xEsc("\033[1X⢸\033[1D"), H::xEsc($driver->getBuffer()));
         $s->spin();
-        $this->assertEquals(H::xEsc("\033[1X⣰\033[1D"), H::xEsc($driver->getBuffer()));
+        self::assertEquals(H::xEsc("\033[1X⣰\033[1D"), H::xEsc($driver->getBuffer()));
         $s->spin();
-        $this->assertEquals(H::xEsc("\033[1X⣤\033[1D"), H::xEsc($driver->getBuffer()));
+        self::assertEquals(H::xEsc("\033[1X⣤\033[1D"), H::xEsc($driver->getBuffer()));
         $s->spin();
-        $this->assertEquals(H::xEsc("\033[1X⣆\033[1D"), H::xEsc($driver->getBuffer()));
+        self::assertEquals(H::xEsc("\033[1X⣆\033[1D"), H::xEsc($driver->getBuffer()));
         $s->spin();
-        $this->assertEquals(H::xEsc("\033[1X⡇\033[1D"), H::xEsc($driver->getBuffer()));
+        self::assertEquals(H::xEsc("\033[1X⡇\033[1D"), H::xEsc($driver->getBuffer()));
         $s->end();
-        $this->assertEquals(H::xEsc("\033[1X\033[?25h"), H::xEsc($driver->getBuffer()));
+        self::assertEquals(H::xEsc("\033[1X\033[?25h"), H::xEsc($driver->getBuffer()));
     }
 
     /**
@@ -78,7 +78,7 @@ class SpinnerTest extends TestCase
             );
             return $driver->getValue($s);
         } catch (\ReflectionException $e) {
-            $this->fail('Unable to reflect property.');
+            self::fail('Unable to reflect property.');
         }
         // intentionally no return
     }
