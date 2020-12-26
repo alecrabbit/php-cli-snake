@@ -36,13 +36,13 @@ jobs:
       - name: Install dependencies
         run: composer update --${{ matrix.dependency-version }} --prefer-dist --no-interaction --no-suggest
 
-      - name: Run test suite
-        run: composer run-script test
+#      - name: Run test suite
+#        run: composer run-script test
 
-#      - name: Execute tests on Ubuntu OS
-#        if: matrix.operating-system == 'ubuntu-latest'
-#        run: XDEBUG_MODE=coverage vendor/bin/phpunit
-#
-#      - name: Execute tests on Windows OS
-#        if: matrix.operating-system == 'windows-latest'
-#        run: vendor/bin/phpunit
+      - name: Execute tests on Ubuntu OS
+        if: matrix.os == 'ubuntu-latest'
+        run: XDEBUG_MODE=coverage vendor/bin/phpunit
+
+      - name: Execute tests on Windows OS
+        if: matrix.os == 'windows-latest'
+        run: vendor/bin/phpunit
