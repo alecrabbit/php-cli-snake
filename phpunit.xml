@@ -9,17 +9,23 @@
          stopOnFailure="false"
          bootstrap="tests/bootstrap.php"
          printerClass="NunoMaduro\Collision\Adapters\Phpunit\Printer">
+    <coverage>
+        <include>
+            <directory suffix=".php">src/</directory>
+        </include>
+        <report>
+            <clover outputFile="build/logs/clover.xml"/>
+            <html outputDirectory="build/coverage/html"/>
+            <text outputFile="build/coverage/coverage.txt"/>
+        </report>
+    </coverage>
     <testsuites>
-        <testsuite name="Unit">
-            <directory suffix="Test.php">tests/Unit</directory>
-        </testsuite>
-
         <testsuite name="Common">
-            <directory suffix="Test.php">tests</directory>
+            <directory>tests</directory>
         </testsuite>
     </testsuites>
     <logging>
-        <log type="testdox-html" target="./tests/tmp/testdox.html"/>
-        <log type="testdox-text" target="./tests/tmp/testdox.txt"/>
+        <log type="testdox-html" target="./build/testdox/testdox.html"/>
+        <log type="testdox-text" target="./build/testdox/testdox.txt"/>
     </logging>
 </phpunit>

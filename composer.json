@@ -34,9 +34,6 @@
       "AlecRabbit\\Tests\\Snake\\": "tests"
     }
   },
-  "scripts": {
-    "test": "vendor/bin/phpunit"
-  },
   "minimum-stability": "beta",
   "prefer-stable": true
 }
