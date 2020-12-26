@@ -42,10 +42,21 @@ jobs:
       - name: Install dependencies
         run: composer update --${{ matrix.dependency-version }} --prefer-dist --no-interaction --no-suggest
 
+      - name: Setup Problem Matches
+        run: |
+          echo "::add-matcher::${{ runner.tool_cache }}/php.json"
+          echo "::add-matcher::${{ runner.tool_cache }}/phpunit.json"
+
       - name: Execute tests on Ubuntu OS
         if: matrix.os == 'ubuntu-latest'
         run: XDEBUG_MODE=coverage vendor/bin/phpunit
 
       - name: Execute tests on Windows OS
         if: matrix.os == 'windows-latest'
-        run: XDEBUG_MODE=coverage vendor/bin/phpunit --coverage-text
+        run: vendor/bin/phpunit
+
+      - name: Run Psalm
+        run: psalm --output-format=github
+
+      - name: Run PHPStan
+        run: phpstan analyse src
