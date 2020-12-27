@@ -55,8 +55,8 @@ jobs:
         if: matrix.os == 'windows-latest'
         run: vendor/bin/phpunit
 
-      - name: Run Psalm
-        run: psalm --output-format=github
-
-      - name: Run PHPStan
-        run: phpstan analyse src
+#      - name: Run Psalm
+#        run: psalm --output-format=github
+#
+#      - name: Run PHPStan
+#        run: phpstan analyse src
