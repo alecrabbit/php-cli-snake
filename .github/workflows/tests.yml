@@ -8,7 +8,7 @@ jobs:
     strategy:
       fail-fast: true
       matrix:
-        os: [ubuntu-latest, windows-latest]
+        os: [ubuntu-latest, windows-latest, macos-latest]
         php: [7.4]
         dependency-version: [prefer-lowest, prefer-stable]
 
@@ -53,6 +53,10 @@ jobs:
 
       - name: Execute tests on Windows OS
         if: matrix.os == 'windows-latest'
+        run: vendor/bin/phpunit
+
+      - name: Execute tests on Mac OS
+        if: matrix.os == 'macos-latest'
         run: vendor/bin/phpunit
 
 #      - name: Run Psalm
