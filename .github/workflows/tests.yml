@@ -40,7 +40,7 @@ jobs:
           coverage: xdebug
 
       - name: Install dependencies
-        run: composer update --${{ matrix.dependency-version }} --prefer-dist --no-interaction --no-suggest
+        run: composer update --${{ matrix.dependency-version }} --no-interaction
 
       - name: Setup Problem Matches
         run: |
