@@ -3,6 +3,7 @@ include ./.make/includes/*
 up: docker_up time_current
 down: docker_down time_current
 restart: echo_restarting docker_down docker_up time_current
+test: run_phpunit
 
 time_current:
 	@echo "\n$(COMMENT_COLOR) $(shell date) $(STOP_COLOR)\n";
@@ -19,7 +20,7 @@ docker_down:
 echo_restarting:
 	@echo "\n$(COMMENT_COLOR)Restarting...$(STOP_COLOR)";
 
-test:
+run_phpunit:
 	@echo "\n$(COMMENT_COLOR)Testing...$(STOP_COLOR)\n";
 	@docker-compose exec app phpunit
 
